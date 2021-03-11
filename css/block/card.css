@@ -1,0 +1,69 @@
+.card{
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 16px;
+    width: 25%;
+    position: relative;
+    margin: 12px 12px 12px 12px;
+}
+
+.wrap-card-options {
+    position: absolute;
+    top: -16px;
+    left: 0;
+
+    opacity: 0;
+    transition: opacity 0.2s linear;
+}
+.card:hover .wrap-card-options {
+    opacity: 1;
+}
+
+.card-options {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #FFF;
+
+    display: inline-block;
+    box-sizing: border-box;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    text-indent: -9999px;
+    overflow: hidden;
+    cursor: pointer; 
+}
+
+.card-options.isActive {
+    border-width: 4px;;
+}
+
+.card_delete {
+    background-image: url(../../images/delete.svg);
+    background-size: 70%;
+    margin-right: 15px;
+}
+
+.card_edit {
+    background-image: url(../../images/edit.svg);
+    background-size: 65%;
+}
+
+.card-content[contenteditable="true"] {
+    outline: 2px dashed rgba(0, 0, 0, 0.5);
+}
+
+/* seletor de atributo */
+[data-color="first"] {
+    background-color: #45AAEE; /*Azul*/
+}
+[data-color="second"] {
+    background-color: #FF1010; /*Vermelho*/
+}
+[data-color="third"] {
+    background-color: #76EF40; /*Verde*/
+}
+[data-color="fourth"] {
+    background-color: #EBEF40; /*Amarelo*/
+}
